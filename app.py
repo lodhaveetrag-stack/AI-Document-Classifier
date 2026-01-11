@@ -328,7 +328,7 @@ Return only the JSON object, no other text."""
 # STREAMLIT UI
 # ============================================================================
 
-st.set_page_config(page_title="AI Document Classifier + Extractor", layout="wide")
+st.set_page_config(page_title="AI Document Classifier + Extractor v 1.0", layout="wide")
 
 st.title("📄 AI Document Classifier + Data Extractor")
 st.write("Upload a PDF or image document - AI will classify it and extract structured data")
