@@ -1,0 +1,35 @@
+# Virtual environment
+venv/
+env/
+
+# Environment variables (contains API key)
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Streamlit cache
+.streamlit/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files (your real documents)
+*.pdf
+*.jpg
+*.png
+*.jpeg
+test_documents/
+screenshots/
+
+# Logs
+*.log
