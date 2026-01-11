@@ -17,8 +17,10 @@ from datetime import datetime
 import base64
 from pdf2image import convert_from_bytes
 
-# Configure external tools
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# Configure Tesseract path (only needed for Windows local development)
+import platform
+if platform.system() == 'Windows':
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Load environment variables
 load_dotenv()
@@ -141,7 +143,7 @@ def extract_structured_data(text, doc_classification, uploaded_file):
                         pdf_bytes, 
                         first_page=1, 
                         last_page=1,
-                        poppler_path=r'C:\Program Files\poppler-24.08.0\Library\bin'
+                        poppler_path=r'C:\Program Files\poppler-24.08.0\Library\bin' if platform.system() == 'Windows' else None
                     )
                     
                     # Encode as base64 for API
